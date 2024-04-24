@@ -46,9 +46,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Black", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(157, 364);
+            label1.Location = new Point(137, 273);
             label1.Name = "label1";
-            label1.Size = new Size(285, 46);
+            label1.Size = new Size(228, 37);
             label1.TabIndex = 0;
             label1.Text = "Computer Clock";
             // 
@@ -56,9 +56,9 @@
             // 
             ComputerHour.BorderStyle = BorderStyle.FixedSingle;
             ComputerHour.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            ComputerHour.Location = new Point(157, 468);
+            ComputerHour.Location = new Point(137, 351);
             ComputerHour.Name = "ComputerHour";
-            ComputerHour.Size = new Size(58, 61);
+            ComputerHour.Size = new Size(51, 46);
             ComputerHour.TabIndex = 1;
             ComputerHour.Text = "00";
             // 
@@ -66,9 +66,9 @@
             // 
             ComputerMinute.BorderStyle = BorderStyle.FixedSingle;
             ComputerMinute.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            ComputerMinute.Location = new Point(256, 468);
+            ComputerMinute.Location = new Point(224, 351);
             ComputerMinute.Name = "ComputerMinute";
-            ComputerMinute.Size = new Size(58, 61);
+            ComputerMinute.Size = new Size(51, 46);
             ComputerMinute.TabIndex = 1;
             ComputerMinute.Text = "00";
             // 
@@ -76,9 +76,9 @@
             // 
             ComputerSecond.BorderStyle = BorderStyle.FixedSingle;
             ComputerSecond.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            ComputerSecond.Location = new Point(359, 468);
+            ComputerSecond.Location = new Point(314, 351);
             ComputerSecond.Name = "ComputerSecond";
-            ComputerSecond.Size = new Size(58, 61);
+            ComputerSecond.Size = new Size(51, 46);
             ComputerSecond.TabIndex = 1;
             ComputerSecond.Text = "00";
             // 
@@ -90,9 +90,10 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(221, 291);
+            button1.Location = new Point(193, 218);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(125, 50);
+            button1.Size = new Size(109, 38);
             button1.TabIndex = 2;
             button1.Text = "Clear";
             button1.UseVisualStyleBackColor = true;
@@ -101,9 +102,10 @@
             // button2
             // 
             button2.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(221, 235);
+            button2.Location = new Point(193, 176);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(125, 50);
+            button2.Size = new Size(109, 38);
             button2.TabIndex = 3;
             button2.Text = "Start/Stop";
             button2.UseVisualStyleBackColor = true;
@@ -113,9 +115,9 @@
             // 
             hour.AutoSize = true;
             hour.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            hour.Location = new Point(126, 141);
+            hour.Location = new Point(110, 106);
             hour.Name = "hour";
-            hour.Size = new Size(67, 54);
+            hour.Size = new Size(54, 45);
             hour.TabIndex = 4;
             hour.Text = "00";
             // 
@@ -123,19 +125,20 @@
             // 
             Minuts.AutoSize = true;
             Minuts.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            Minuts.Location = new Point(247, 138);
+            Minuts.Location = new Point(221, 106);
             Minuts.Name = "Minuts";
-            Minuts.Size = new Size(67, 54);
+            Minuts.Size = new Size(54, 45);
             Minuts.TabIndex = 5;
             Minuts.Text = "00";
+            Minuts.Click += Minuts_Click;
             // 
             // Seconds
             // 
             Seconds.AutoSize = true;
             Seconds.Font = new Font("Segoe UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point);
-            Seconds.Location = new Point(380, 141);
+            Seconds.Location = new Point(332, 106);
             Seconds.Name = "Seconds";
-            Seconds.Size = new Size(62, 50);
+            Seconds.Size = new Size(50, 41);
             Seconds.TabIndex = 6;
             Seconds.Text = "00";
             // 
@@ -143,17 +146,17 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(177, 38);
+            label5.Location = new Point(155, 28);
             label5.Name = "label5";
-            label5.Size = new Size(222, 50);
+            label5.Size = new Size(180, 41);
             label5.TabIndex = 7;
             label5.Text = "Stop Watch";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(553, 554);
+            ClientSize = new Size(484, 416);
             Controls.Add(label5);
             Controls.Add(Seconds);
             Controls.Add(Minuts);
@@ -164,7 +167,6 @@
             Controls.Add(ComputerMinute);
             Controls.Add(ComputerHour);
             Controls.Add(label1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;

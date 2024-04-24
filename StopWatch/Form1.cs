@@ -35,5 +35,10 @@ namespace StopWatch
         {
 
         }
+
+        private void Minuts_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
