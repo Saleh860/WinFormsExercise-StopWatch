@@ -25,5 +25,28 @@ namespace StopWatch
         {
             UpdateComputerTime();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timerDown_Tick(object sender, EventArgs e)
+        {
+            DateTime Now = DateTime.Now;
+            timerMicro.Text = Now.Microsecond.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (timerDown.Enabled)
+            {
+            timerDown.Enabled = false;
+            }
+            else
+            {
+                timerDown.Enabled = true;
+            }
+        }
     }
 }
