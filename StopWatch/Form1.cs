@@ -25,5 +25,17 @@ namespace StopWatch
         {
             UpdateComputerTime();
         }
+
+       
+
+        private void reset_Click(object sender, EventArgs e)
+        {
+            string min = ("00"); string sec = ("00"); string partofsec = ("00");
+        }
+
+        private void stopButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
