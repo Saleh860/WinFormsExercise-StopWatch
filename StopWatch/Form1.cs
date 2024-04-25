@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace StopWatch
 {
     public partial class Form1 : Form
@@ -21,9 +23,32 @@ namespace StopWatch
             ComputerSecond.Text = Now.Second.ToString();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Minute_Click(object sender, EventArgs e)
         {
-            UpdateComputerTime();
+
+        }
+
+        private void Clear_Click (object sender, EventArgs e)
+        {
+            timer2.Stop();
+           
+         
+        }
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            timer2.Enabled = true;
+        }
+
+        private void UpdateTime(string timer3)
+        {
+      
+
+
+            
+        }
+        private void timer2_Tick(object sender, EventArgs e)
+        {
         }
     }
+
 }
