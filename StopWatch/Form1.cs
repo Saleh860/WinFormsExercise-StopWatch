@@ -25,5 +25,38 @@ namespace StopWatch
         {
             UpdateComputerTime();
         }
+
+        private void ComputerHour_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComputerMinute_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            ComputerHour.Text = Now.Hour.ToString();
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+            ComputerMinute.Text = Now.Minute.ToString();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            ComputerSecond.Text = Now.Second.ToString();
+
+        }
     }
 }
