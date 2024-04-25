@@ -25,5 +25,15 @@ namespace StopWatch
         {
             UpdateComputerTime();
         }
+
+        private void ComputerSecond_Click(object sender, EventArgs e)
+        {
+             
+        }
+
+        private void ComputerHour_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
