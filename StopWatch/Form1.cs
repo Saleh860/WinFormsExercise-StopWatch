@@ -25,11 +25,7 @@ namespace StopWatch
             label4.Text = Now.Second.ToString();
             label5.Text = Now.Second.ToString();
         }
-        //
-
-
-
-        //
+        
         private void UpdateComputerTime()
         {
             DateTime Now = DateTime.Now;

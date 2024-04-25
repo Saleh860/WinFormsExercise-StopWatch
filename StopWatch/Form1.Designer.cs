@@ -100,9 +100,9 @@
             label2.Font = new Font("Segoe UI Black", 20F);
             label2.Location = new Point(85, 9);
             label2.Name = "label2";
-            label2.Size = new Size(374, 46);
+            label2.Size = new Size(388, 46);
             label2.TabIndex = 2;
-            label2.Text = "Computer Stop Wach";
+            label2.Text = "Computer Stop Watch";
             label2.Click += label2_Click;
             // 
             // label3
