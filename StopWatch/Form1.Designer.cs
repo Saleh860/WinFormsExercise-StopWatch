@@ -34,20 +34,24 @@
             ComputerMinute = new Label();
             ComputerSecond = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
-            timerMinu = new Label();
-            timerSec = new Label();
-            timerMicro = new Label();
             label2 = new Label();
             label3 = new Label();
-            timerDown = new System.Windows.Forms.Timer(components);
+            timer = new System.Windows.Forms.Timer(components);
+            labelMin = new Label();
+            labelSec = new Label();
+            labelMS = new Label();
+            buttonStartStop = new Button();
+            label4 = new Label();
             button1 = new Button();
+            timerColorClear = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Black", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(157, 364);
+            label1.Location = new Point(196, 328);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(285, 46);
             label1.TabIndex = 0;
@@ -57,9 +61,10 @@
             // 
             ComputerHour.BorderStyle = BorderStyle.FixedSingle;
             ComputerHour.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            ComputerHour.Location = new Point(157, 468);
+            ComputerHour.Location = new Point(196, 421);
+            ComputerHour.Margin = new Padding(4, 0, 4, 0);
             ComputerHour.Name = "ComputerHour";
-            ComputerHour.Size = new Size(58, 61);
+            ComputerHour.Size = new Size(72, 55);
             ComputerHour.TabIndex = 1;
             ComputerHour.Text = "00";
             // 
@@ -67,9 +72,10 @@
             // 
             ComputerMinute.BorderStyle = BorderStyle.FixedSingle;
             ComputerMinute.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            ComputerMinute.Location = new Point(256, 468);
+            ComputerMinute.Location = new Point(320, 421);
+            ComputerMinute.Margin = new Padding(4, 0, 4, 0);
             ComputerMinute.Name = "ComputerMinute";
-            ComputerMinute.Size = new Size(58, 61);
+            ComputerMinute.Size = new Size(72, 55);
             ComputerMinute.TabIndex = 1;
             ComputerMinute.Text = "00";
             // 
@@ -77,97 +83,131 @@
             // 
             ComputerSecond.BorderStyle = BorderStyle.FixedSingle;
             ComputerSecond.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            ComputerSecond.Location = new Point(359, 468);
+            ComputerSecond.Location = new Point(449, 421);
+            ComputerSecond.Margin = new Padding(4, 0, 4, 0);
             ComputerSecond.Name = "ComputerSecond";
-            ComputerSecond.Size = new Size(58, 61);
+            ComputerSecond.Size = new Size(72, 55);
             ComputerSecond.TabIndex = 1;
             ComputerSecond.Text = "00";
             // 
             // timer1
             // 
-            timer1.Interval = 5000;
+            timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
-            // 
-            // timerMinu
-            // 
-            timerMinu.BorderStyle = BorderStyle.FixedSingle;
-            timerMinu.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            timerMinu.Location = new Point(157, 206);
-            timerMinu.Name = "timerMinu";
-            timerMinu.Size = new Size(58, 61);
-            timerMinu.TabIndex = 2;
-            timerMinu.Text = "00";
-            // 
-            // timerSec
-            // 
-            timerSec.BorderStyle = BorderStyle.FixedSingle;
-            timerSec.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            timerSec.Location = new Point(256, 206);
-            timerSec.Name = "timerSec";
-            timerSec.Size = new Size(58, 61);
-            timerSec.TabIndex = 3;
-            timerSec.Text = "00";
-            // 
-            // timerMicro
-            // 
-            timerMicro.BorderStyle = BorderStyle.FixedSingle;
-            timerMicro.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            timerMicro.Location = new Point(359, 206);
-            timerMicro.Name = "timerMicro";
-            timerMicro.Size = new Size(58, 61);
-            timerMicro.TabIndex = 4;
-            timerMicro.Text = "00";
             // 
             // label2
             // 
             label2.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(332, 207);
+            label2.Location = new Point(366, 188);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(21, 61);
+            label2.Size = new Size(26, 55);
             label2.TabIndex = 5;
             label2.Text = ":";
-            label2.Click += label2_Click;
             // 
             // label3
             // 
             label3.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(221, 207);
+            label3.Location = new Point(258, 187);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(32, 61);
+            label3.Size = new Size(40, 55);
             label3.TabIndex = 6;
             label3.Text = ":";
             // 
-            // timerDown
+            // timer
             // 
-            timerDown.Interval = 1;
-            timerDown.Tick += timerDown_Tick;
+            timer.Interval = 1;
+            timer.Tick += timer_Tick;
+            // 
+            // labelMin
+            // 
+            labelMin.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            labelMin.Location = new Point(178, 187);
+            labelMin.Margin = new Padding(4, 0, 4, 0);
+            labelMin.Name = "labelMin";
+            labelMin.Padding = new Padding(10, 0, 0, 0);
+            labelMin.Size = new Size(72, 55);
+            labelMin.TabIndex = 7;
+            labelMin.Text = "00";
+            // 
+            // labelSec
+            // 
+            labelSec.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            labelSec.Location = new Point(289, 186);
+            labelSec.Margin = new Padding(4, 0, 4, 0);
+            labelSec.Name = "labelSec";
+            labelSec.Padding = new Padding(10, 0, 0, 0);
+            labelSec.Size = new Size(72, 55);
+            labelSec.TabIndex = 8;
+            labelSec.Text = "00";
+            // 
+            // labelMS
+            // 
+            labelMS.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            labelMS.Location = new Point(391, 187);
+            labelMS.Margin = new Padding(4, 0, 4, 0);
+            labelMS.Name = "labelMS";
+            labelMS.Padding = new Padding(10, 0, 0, 0);
+            labelMS.Size = new Size(72, 55);
+            labelMS.TabIndex = 9;
+            labelMS.Text = "00";
+            // 
+            // buttonStartStop
+            // 
+            buttonStartStop.Location = new Point(178, 279);
+            buttonStartStop.Name = "buttonStartStop";
+            buttonStartStop.Size = new Size(115, 42);
+            buttonStartStop.TabIndex = 10;
+            buttonStartStop.Text = "Start/Stop";
+            buttonStartStop.UseVisualStyleBackColor = true;
+            buttonStartStop.Click += buttonStartStop_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Black", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(227, 79);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(197, 46);
+            label4.TabIndex = 11;
+            label4.Text = "Stopwatch";
             // 
             // button1
             // 
-            button1.Location = new Point(237, 298);
+            button1.Location = new Point(348, 279);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 7;
-            button1.Text = "Start/Stop";
+            button1.Size = new Size(115, 42);
+            button1.TabIndex = 12;
+            button1.Text = "Clear";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // timerColorClear
+            // 
+            timerColorClear.Interval = 500;
+            timerColorClear.Tick += timerColorClear_Tick;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(553, 615);
+            ClientSize = new Size(691, 554);
             Controls.Add(button1);
+            Controls.Add(label4);
+            Controls.Add(buttonStartStop);
+            Controls.Add(labelMS);
+            Controls.Add(labelSec);
+            Controls.Add(labelMin);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(timerMicro);
-            Controls.Add(timerSec);
-            Controls.Add(timerMinu);
             Controls.Add(ComputerSecond);
             Controls.Add(ComputerMinute);
             Controls.Add(ComputerHour);
             Controls.Add(label1);
-            Margin = new Padding(3, 4, 3, 4);
+            Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Margin = new Padding(4);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
@@ -182,12 +222,15 @@
         private Label ComputerMinute;
         private Label ComputerSecond;
         private System.Windows.Forms.Timer timer1;
-        private Label timerMinu;
-        private Label timerSec;
-        private Label timerMicro;
         private Label label2;
         private Label label3;
-        private System.Windows.Forms.Timer timerDown;
+        private System.Windows.Forms.Timer timer;
+        private Label labelMin;
+        private Label labelSec;
+        private Label labelMS;
+        private Button buttonStartStop;
+        private Label label4;
         private Button button1;
+        private System.Windows.Forms.Timer timerColorClear;
     }
 }
