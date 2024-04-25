@@ -113,6 +113,8 @@ namespace StopWatch
 
              start = new button_start(s_huor,s_mint);
 
+
+
         }
 
         class button_start
