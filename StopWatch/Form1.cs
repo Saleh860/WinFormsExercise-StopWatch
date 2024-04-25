@@ -16,14 +16,57 @@ namespace StopWatch
         private void UpdateComputerTime()
         {
             DateTime Now = DateTime.Now;
-            ComputerHour.Text = Now.Hour.ToString();
-            ComputerMinute.Text = Now.Minute.ToString();
-            ComputerSecond.Text = Now.Second.ToString();
+            label4.Text = Now.Hour.ToString();
+            label2.Text = Now.Minute.ToString();
+            label.Text = Now.Second.ToString();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             UpdateComputerTime();
+        }
+
+        private void ComputerSecond_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+
+            {
+                
+            }
+        }
+
+        private void l3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
