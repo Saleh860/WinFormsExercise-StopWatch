@@ -70,7 +70,8 @@ namespace StopWatch
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+           
+           
         }
 
         private void ComputerMinute_Click(object sender, EventArgs e)
