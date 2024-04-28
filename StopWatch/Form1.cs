@@ -2,6 +2,9 @@ namespace StopWatch
 {
     public partial class Form1 : Form
     {
+        private bool isRunning;
+        private DateTime startTime;
+
         public Form1()
         {
             InitializeComponent();
@@ -11,6 +14,7 @@ namespace StopWatch
         {
             UpdateComputerTime();
             timer1.Enabled = true;
+            isRunning = false;
         }
 
         private void UpdateComputerTime()
@@ -24,6 +28,86 @@ namespace StopWatch
         private void timer1_Tick(object sender, EventArgs e)
         {
             UpdateComputerTime();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (isRunning)
+            {
+                isRunning = false;
+                timer1.Stop();
+                UpdateComputerTime();
+            }
+            else
+            {
+                isRunning = true;
+                startTime = DateTime.Now;
+                timer1.Start();
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Label2 was clicked!");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            isRunning = false;
+            timer1.Stop();
+            ComputerHour.Text = "00";
+            ComputerMinute.Text = "00";
+            ComputerSecond.Text = "00";
+        }
+
+        private void ComputerHour_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("The current hour is: " + ComputerHour.Text);
+        }
+
+        private void ComputerMinute_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("The current minute is: " + ComputerMinute.Text);
+        }
+
+        private void ComputerSecond_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("The current minute is: " + ComputerMinute.Text);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Label4 was clicked!");
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Label4 was clicked!");
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            UpdateComputerTime();
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Label2 was clicked!");
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Label3 was clicked!");
+        }
+
+        private void label4_Click_2(object sender, EventArgs e)
+        {
+            MessageBox.Show("Label4 was clicked!");
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Label5 was clicked!");
         }
     }
 }
