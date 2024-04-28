@@ -2,6 +2,8 @@ namespace StopWatch
 {
     public partial class Form1 : Form
     {
+        private DateTime startTime;
+        private bool isRunning;
         public Form1()
         {
             InitializeComponent();
@@ -11,6 +13,8 @@ namespace StopWatch
         {
             UpdateComputerTime();
             timer1.Enabled = true;
+            timer2.Enabled = true;
+            ClearStopwatch();
         }
 
         private void UpdateComputerTime()
@@ -24,6 +28,58 @@ namespace StopWatch
         private void timer1_Tick(object sender, EventArgs e)
         {
             UpdateComputerTime();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComputerHour_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (isRunning)
+            {
+                // Stop the stopwatch
+                timer2.Stop();
+                isRunning = false;
+                button1.Text = "Start";
+            }
+            else
+            {
+                // Start the stopwatch
+                startTime = DateTime.Now;
+                timer2.Start();
+                isRunning = true;
+                button1.Text = "Stop";
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            ClearStopwatch();
+
+        }
+        private void ClearStopwatch()
+        {
+            timer2.Stop();
+
+            label4.Text = "00";
+            label3.Text = "00";
+            label2.Text = "00";
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            TimeSpan elapsedTime = DateTime.Now-startTime;
+            label4.Text = elapsedTime.Hours.ToString("00");
+            label3.Text = elapsedTime.Minutes.ToString("00");
+            label2.Text = elapsedTime.Seconds.ToString("00");
         }
     }
 }
