@@ -9,7 +9,7 @@ namespace StopWatch
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            UpdateComputerTime();
+            UpdateComputerTime();  
             timer1.Enabled = true;
         }
 
