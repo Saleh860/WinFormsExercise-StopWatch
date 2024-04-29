@@ -20,6 +20,7 @@ namespace StopWatch
             ComputerMinute.Text = Now.Minute.ToString();
             ComputerSecond.Text = Now.Second.ToString();
         }
+         
 
         private void timer1_Tick(object sender, EventArgs e)
         {
