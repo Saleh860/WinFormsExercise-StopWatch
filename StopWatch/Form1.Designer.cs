@@ -35,13 +35,13 @@
             ComputerSecond = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
             label2 = new Label();
-            label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
             timer2 = new System.Windows.Forms.Timer(components);
+            label3 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -105,17 +105,6 @@
             label2.Text = "Computer Stop Watch";
             label2.Click += label2_Click;
             // 
-            // label3
-            // 
-            label3.BorderStyle = BorderStyle.FixedSingle;
-            label3.Font = new Font("Segoe UI", 20F);
-            label3.Location = new Point(157, 241);
-            label3.Name = "label3";
-            label3.Size = new Size(58, 61);
-            label3.TabIndex = 3;
-            label3.Text = "00";
-            label3.Click += HourStop;
-            // 
             // label4
             // 
             label4.BorderStyle = BorderStyle.FixedSingle;
@@ -172,6 +161,7 @@
             button3.TabIndex = 8;
             button3.Text = "Restart";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // timer2
             // 
@@ -179,17 +169,28 @@
             timer2.Interval = 1;
             timer2.Tick += timer2_Tick;
             // 
+            // label3
+            // 
+            label3.BorderStyle = BorderStyle.FixedSingle;
+            label3.Font = new Font("Segoe UI", 20F);
+            label3.Location = new Point(167, 240);
+            label3.Name = "label3";
+            label3.Size = new Size(58, 61);
+            label3.TabIndex = 9;
+            label3.Text = "00";
+            label3.Click += label3_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(553, 615);
+            Controls.Add(label3);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(ComputerSecond);
             Controls.Add(ComputerMinute);
@@ -211,12 +212,12 @@
         private Label ComputerSecond;
         private System.Windows.Forms.Timer timer1;
         private Label label2;
-        private Label label3;
         private Label label4;
         private Label label5;
         private Button button1;
         private Button button2;
         private Button button3;
         private System.Windows.Forms.Timer timer2;
+        private Label label3;
     }
 }
