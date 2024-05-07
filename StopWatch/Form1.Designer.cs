@@ -35,11 +35,12 @@
             ComputerSecond = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
             label2 = new Label();
-            label3 = new Label();
+            StopwatchMinute = new Label();
             label4 = new Label();
             button1 = new Button();
             button2 = new Button();
             label5 = new Label();
+            button3 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -84,7 +85,7 @@
             // 
             // timer1
             // 
-            timer1.Interval = 5000;
+            timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
             // 
             // label2
@@ -97,15 +98,15 @@
             label2.TabIndex = 2;
             label2.Text = "00";
             // 
-            // label3
+            // StopwatchMinute
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 20F);
-            label3.Location = new Point(257, 115);
-            label3.Name = "label3";
-            label3.Size = new Size(56, 46);
-            label3.TabIndex = 3;
-            label3.Text = "00";
+            StopwatchMinute.AutoSize = true;
+            StopwatchMinute.Font = new Font("Segoe UI", 20F);
+            StopwatchMinute.Location = new Point(257, 115);
+            StopwatchMinute.Name = "StopwatchMinute";
+            StopwatchMinute.Size = new Size(56, 46);
+            StopwatchMinute.TabIndex = 3;
+            StopwatchMinute.Text = "00";
             // 
             // label4
             // 
@@ -119,47 +120,58 @@
             // 
             // button1
             // 
-            button1.Font = new Font("Segoe UI", 20F);
-            button1.Location = new Point(238, 197);
+            button1.Font = new Font("Segoe UI", 10F);
+            button1.Location = new Point(157, 201);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 5;
-            button1.Text = "Start/Stop";
+            button1.Text = "Start";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Font = new Font("Segoe UI", 20F);
+            button2.Font = new Font("Segoe UI", 10F);
             button2.Location = new Point(238, 258);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
             button2.TabIndex = 6;
-            button2.Text = "Clear";
+            button2.Text = "Reset";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Headline R", 24F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            label5.Font = new Font("Headline R", 22F, FontStyle.Regular, GraphicsUnit.Point, 129);
             label5.Location = new Point(16, 33);
             label5.Name = "label5";
-            label5.Size = new Size(298, 41);
+            label5.Size = new Size(276, 39);
             label5.TabIndex = 7;
             label5.Text = "Stop watch";
             label5.Click += label5_Click;
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Segoe UI", 10F);
+            button3.Location = new Point(323, 201);
+            button3.Name = "button3";
+            button3.Size = new Size(94, 29);
+            button3.TabIndex = 8;
+            button3.Text = "Stop";
+            button3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(553, 615);
+            Controls.Add(button3);
             Controls.Add(label5);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label4);
-            Controls.Add(label3);
+            Controls.Add(StopwatchMinute);
             Controls.Add(label2);
             Controls.Add(ComputerSecond);
             Controls.Add(ComputerMinute);
@@ -167,7 +179,7 @@
             Controls.Add(label1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Stop Watch";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -181,10 +193,11 @@
         private Label ComputerSecond;
         private System.Windows.Forms.Timer timer1;
         private Label label2;
-        private Label label3;
+        private Label StopwatchMinute;
         private Label label4;
         private Button button1;
         private Button button2;
         private Label label5;
+        private Button button3;
     }
 }
