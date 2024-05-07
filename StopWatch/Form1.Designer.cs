@@ -36,7 +36,7 @@
             timer1 = new System.Windows.Forms.Timer(components);
             label2 = new Label();
             StopwatchMinute = new Label();
-            label4 = new Label();
+            StopwatchSecond = new Label();
             button1 = new Button();
             button2 = new Button();
             label5 = new Label();
@@ -108,15 +108,15 @@
             StopwatchMinute.TabIndex = 3;
             StopwatchMinute.Text = "00";
             // 
-            // label4
+            // StopwatchSecond
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 20F);
-            label4.Location = new Point(424, 112);
-            label4.Name = "label4";
-            label4.Size = new Size(56, 46);
-            label4.TabIndex = 4;
-            label4.Text = "00";
+            StopwatchSecond.AutoSize = true;
+            StopwatchSecond.Font = new Font("Segoe UI", 20F);
+            StopwatchSecond.Location = new Point(424, 112);
+            StopwatchSecond.Name = "StopwatchSecond";
+            StopwatchSecond.Size = new Size(56, 46);
+            StopwatchSecond.TabIndex = 4;
+            StopwatchSecond.Text = "00";
             // 
             // button1
             // 
@@ -170,7 +170,7 @@
             Controls.Add(label5);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(label4);
+            Controls.Add(StopwatchSecond);
             Controls.Add(StopwatchMinute);
             Controls.Add(label2);
             Controls.Add(ComputerSecond);
@@ -194,7 +194,7 @@
         private System.Windows.Forms.Timer timer1;
         private Label label2;
         private Label StopwatchMinute;
-        private Label label4;
+        private Label StopwatchSecond;
         private Button button1;
         private Button button2;
         private Label label5;
